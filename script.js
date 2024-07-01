@@ -6,15 +6,15 @@ const textoResultado = Document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-    enunciado: "olá",
+    enunciado: "Quando você era criança, você percebeu que alguns lagos da sua cidade estavam sendo tomados por algum tipo de planta e achou aquilo:",
     alternativas: [
         {
-            texto:"Isso é assustador",
+            texto:"Assustador",
             afirmação: "afirmacao"
 
         },
         {
-            texto:"Isso é assustador",
+            texto:"Esquisito",
             afirmação: "afirmacao"
 
         }
@@ -22,15 +22,15 @@ const perguntas = [
 },
 
 {
-    enunciado: "Mesmo ja  tendo sido repondido, João ainda se perguntava por que aquilo ocorria, até que ele avistou um guarda e foi perguntar. Então o guarda respondeu que aquilo acontece quando á:",
+    enunciado: "Com dúvida você perguntou ao seu pai o que era aquiloç, logo foi respondido a você que aquilo eram diversas algas que cresciam em ambientes poluídos. Aquilo fez você ficar: ",
     alternativas: [
         {
-            texto:"Isso é assustador",
+            texto:"Pensativo",
             afirmação: "afirmacao"
 
         },
         {
-            texto:"Isso é assustador",
+            texto:"",
             afirmação: "afirmacao"
 
         }
@@ -96,7 +96,7 @@ function mostraPergunta() {
     }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-     caixaAlternativas.textContent = "";
+    caixaAlternativas.textContent = "";
     mostraAlternativas();
 }
 
