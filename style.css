@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 :root {
-    --cor-fundo: #01080E;
+    --cor-fundo: #000000;
     --cor-principal: #0B0D20 ;
     --cor-secundaria: #212333;
-    --cor-destaque: #2BDEFD;
+    --cor-destaque: #12a876;
     --cor-texto: #D7F9FF;
   }
 
 body {
+    font-family: "Oswald", sans-serif;;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     display: flex;
@@ -23,5 +26,24 @@ body {
 }
   
 h1{
+    font-size: 35px;
+    color: var(--cor-destaque); 
+}
+
+button {
+    background-color: var(--cor-principal);
+    color: var(--cor-destaque);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-secundaria);
+}
+
+.caixa-perguntas{
     color: var(--cor-destaque); 
 }

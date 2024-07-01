@@ -1,10 +1,10 @@
-const caixaPrincipal = Document.querySelector(".caixaPrincipal");
-const caixaPerguntas = Document.querySelector(".caixaPerguntas");
-const caixaAlternativas = Document.querySelector(".caixaAlternativas");
-const caixaResultados = Document.querySelector(".caixaResultados");
-const textoResultado = Document.querySelector(".texto-Resultado");
+const caixaPrincipal = Document.querySelector(".caixa-principal");
+const caixaPerguntas = Document.querySelector(".caixa-perguntas");
+const caixaAlternativas = Document.querySelector(".caixa-alternativas");
+const caixaResultados = Document.querySelector(".caixa-resultados");
+const textoResultado = Document.querySelector(".texto-resultado");
 
-const Perguntas = [
+const perguntas = [
     {
     enunciado: "olá",
     alternativas: [
@@ -89,6 +89,23 @@ let perguntaAtual;
 let historiaFinal = "";
 
 
+function mostraPergunta() {
+    if (atual >= perguntas.length) {
+        mostraResultado();
+        return;
+    }
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+     caixaAlternativas.textContent = "";
+    mostraAlternativas();
+}
+
+function mostraResultado() {
+    caixaPerguntas.textContent = "Em 2049...";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+}
+
 function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
@@ -98,9 +115,9 @@ function mostraAlternativas(){
     }
 }
 
-function respostaSelecionada(opcaoSelecionada){
-    const afirmacoes = opcaoSelecionada.afirmacoes;
-    historiaFinal = afirmacoes;
+function respostaSelecionada(opcaoSelecionada) {
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    historia += afirmacoes + "";
     atual++;
     mostraPergunta();
 }
