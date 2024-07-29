@@ -1,8 +1,8 @@
-const caixaPrincipal = Document.querySelector(".caixa-principal");
-const caixaPerguntas = Document.querySelector(".caixa-perguntas");
-const caixaAlternativas = Document.querySelector(".caixa-alternativas");
-const caixaResultados = Document.querySelector(".caixa-resultados");
-const textoResultado = Document.querySelector(".texto-resultado");
+const caixaPrincipal = document.querySelector(".caixa-principal");
+const caixaPerguntas = document.querySelector(".caixa-perguntas");
+const caixaAlternativas = document.querySelector(".caixa-alternativas");
+const caixaResultados = document.querySelector(".caixa-resultados");
+const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
@@ -10,76 +10,76 @@ const perguntas = [
     alternativas: [
         {
             texto:"Assustador",
-            afirmação: "afirmacao"
+            afirmacao:"No começo você achou aquilo muito assustador e não queria saber o que era."
 
         },
         {
             texto:"Esquisito",
-            afirmação: "afirmacao"
+            afirmacao:"No começo, você tnha dúvida do era aquilo e queria saber o que era."
 
         }
-        ]
+    ]
 },
 
 {
-    enunciado: "Com dúvida você perguntou ao seu pai o que era aquiloç, logo foi respondido a você que aquilo eram diversas algas que cresciam em ambientes poluídos. Aquilo fez você ficar: ",
+    enunciado: "Com dúvida você perguntou ao seu pai o que era aquilo, logo foi respondido a você que aquilo eram diversas algas que cresciam em ambientes poluídos. Aquilo fez você ficar: ",
     alternativas: [
         {
             texto:"Pensativo",
-            afirmação: "afirmacao"
+            afirmacao:" Após saber o por que das algas crescerem nos lagos, você continuou pensando naquilo."
 
         },
         {
-            texto:"",
-            afirmação: "afirmacao"
+            texto:"Empolgado",
+            afirmacao:" Após saber o por que das algas crescerem nos lagos, você ficou feliz por saber o motivo e que aquilo poderia ter uma solução."
 
         }
-        ]
+    ]
 },
 {
-    enunciado: "Quais são as consequências da proliferação?",
+    enunciado:"Chegando em casa, seu pai pergunta se você gostaria de ajuda-lo em uma tarefa de expulsar essas algas, você e responde:",
     alternativas: [
         {
-            texto:"Isso é assustador",
-            afirmação: "afirmacao"
+            texto:"É claro",
+            afirmacao:"Depois de ser perguntado pelo pai, você aceita, todo empolgado e possuindo uma grande voltade."
 
         },
         {
-            texto:"Isso é assustador",
-            afirmação: "afirmacao"
+            texto:"Hum... tudo bem",
+            afirmacao:" Depois de ser perguntado pelo pai, mesmo possuindo um receio, você aceita ajuda-lo."
 
         }
-        ]
+    ]
 },
 
 {
-    enunciado: "Existe alguma forma de prevenir",
+    enunciado: "No lago, você avista um guarda florestal e então pergunta a ele se há alguma forma de previnir esse acidente, ele responde que sim, e que era só não ser depositado dejetos industriais no lago, onvindo isso você fica:",
     alternativas: [
         {
-        texto:"Isso é assustador",
-        afirmação: "afirmacao"
+            texto:"Furiosos",
+            afirmacao:" Ao saber quer era possível impedir esses incidentes, você fica furioso com as grandes indústrias e se pergunta por que elas não são impedidas"
 
-    },
-    {
-        texto:"Isso é assustador",
-        afirmação: "afirmacao"
+        },
+        {
+            texto:"Feliz",
+            afirmacao:" Ao saber quer era possível impedir esses incidentes, você fica feliz, entendendo que aquilo era facilmente impedido."
 
-    }
-        ]
+        }
+    ]
 },
 {
-    enunciado: "Quais medid[as podem ser tomadas para controlar?",
+    enunciado:"Ao ver o lago limpo e sem nenhuma alga, você se sente:",
     alternativas: [
         {
-        texto:"Isso é assustador",
-        afirmação: "afirmacao"
+            texto:"Satisfeito",
+            afirmacao:" No final, um sentimento de satisfação o percorre."
 
-    },
-    {
-        texto:"Isso é assustador",
-        afirmação: "afirmacao"
+        },
+        {
+            texto:"Feliz, embora recioso",
+            afirmacao:" No final, mesmo furioso com as grandes corporações você ainda se ente satisfeito pelo trabalho feito."
 
-    }
+        }
     ]
 }
 ];
@@ -100,11 +100,6 @@ function mostraPergunta() {
     mostraAlternativas();
 }
 
-function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
-    textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = "";
-}
 
 function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas) {
@@ -117,9 +112,16 @@ function mostraAlternativas(){
 
 function respostaSelecionada(opcaoSelecionada) {
     const afirmacoes = opcaoSelecionada.afirmacao;
-    historia += afirmacoes + "";
+    historiaFinal += afirmacoes + "";
     atual++;
     mostraPergunta();
 }
+
+function mostraResultado() {
+    caixaPerguntas.textContent = "Em 2001...";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+}
+
 
 mostraPergunta();
