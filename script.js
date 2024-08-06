@@ -11,15 +11,15 @@ const perguntas = [
         {
             texto:"Assustador",
             afirmacao:[
-                "No começo você achou aquilo muito assustador e não queria saber o que era.",
-                "No começo, quando viu aquilo, você sentiu um sentimento muito estranho."
+                " No começo você achou aquilo muito assustador e não queria saber o que era.",
+                " No começo, quando viu aquilo, você sentiu um sentimento muito estranho."
             ]
         },
         {
             texto:"Esquisito",
             afirmacao:[
-                "No começo, você tnha dúvida do era aquilo e queria saber o que era.",
-                "Quando viu as algas pela primeira vez, você tinha uma grande vontade de descobrir o que era aquilo."
+                " No começo, você tnha dúvida do era aquilo e queria saber o que era.",
+                " Quando viu as algas pela primeira vez, você tinha uma grande vontade de descobrir o que era aquilo."
             ]
         }
     ]
@@ -32,14 +32,15 @@ const perguntas = [
             texto:"Pensativo",
             afirmacao:[
                 "Após saber o por que das algas crescerem nos lagos, você continuou pensando naquilo.",
-                "Ao saber que aquilo eram algas, um pensamento de dúvida o percorreu, aliás, para você só existiam algas de baixo d'água.",
-                "Pensando nas algas, as únicas coisas que ainda te deixavam dúvidas, eram os motivos daquilo acontecer."
+                " Ao saber que aquilo eram algas, um pensamento de dúvida o percorreu, aliás, para você só existiam algas de baixo d'água.",
+                " Pensando nas algas, as únicas coisas que ainda te deixavam dúvidas, eram os motivos daquilo acontecer."
+            ]    
         },
         {
             texto:"Empolgado",
             afirmacao:[
-                "Após saber o por que das algas crescerem nos lagos, você ficou feliz.",
-                "Sabendo que aquilo verde em cima do lago eram algas, o único pensamento que você teve foi de que aquilo seria muito fácil de resolver."  
+                " Após saber o por que das algas crescerem nos lagos, você ficou feliz.",
+                " Sabendo que aquilo verde em cima do lago eram algas, o único pensamento que você teve foi de que aquilo seria muito fácil de resolver."  
             ]
         }
     ]
@@ -50,15 +51,15 @@ const perguntas = [
         {
             texto:"É claro",
             afirmacao:[
-                "Depois de ser perguntado pelo pai, você aceita, todo empolgado e possuindo uma grande voltade de ajudá-lo.",
-                "Recebendo a propósta de ajuda, você não pensa duas vezes e aceita."
+                " Depois de ser perguntado pelo pai, você aceita, todo empolgado e possuindo uma grande voltade de ajudá-lo.",
+                " Recebendo a propósta de ajuda, você não pensa duas vezes e aceita."
             ]
         },
         {
             texto:"Hum... tudo bem",
             afirmacao:[
-                "Depois de ser perguntado pelo pai, mesmo possuindo um receio, você aceita ajudá-lo.",
-                "Mesmo estando com medo, você aceitou ajudar seu pai."
+                " Depois de ser perguntado pelo pai, mesmo possuindo um receio, você aceita ajudá-lo.",
+                " Mesmo estando com medo, você aceitou ajudar seu pai."
             ]
         }
     ]
@@ -70,16 +71,16 @@ const perguntas = [
         {
             texto:"Furiosos",
             afirmacao:[
-                "Ao saber quer era possível impedir esses incidentes, você fica furioso com as grandes indústrias e se pergunta por que elas não são impedidas",
-                "Descobrindo que o lago poderia ser insento daquilo, você fica furioso, imaginando o que os peixes do lago passaram"
+                " Ao saber quer era possível impedir esses incidentes, você fica furioso com as grandes indústrias e se pergunta por que elas não são impedidas",
+                " Descobrindo que o lago poderia ser insento daquilo, você fica furioso, imaginando o que os peixes do lago passaram"
             ]
         },
         {
             texto:"Feliz",
             afirmacao:[
-                "Ao saber quer era possível impedir esses incidentes, você fica feliz, entendendo que aquilo era facilmente impedido.",
-                "Ao descrobir que era possível impedir esses incidentes, você sente um alívio.",
-                "Quando descobriu como impedir aquilo, você se sentiu muito contente e motivado."
+                " Ao saber quer era possível impedir esses incidentes, você fica feliz, entendendo que aquilo era facilmente impedido.",
+                " Ao descrobir que era possível impedir esses incidentes, você sente um alívio.",
+                " Quando descobriu como impedir aquilo, você se sentiu muito contente e motivado."
             ]
         }
     ]
@@ -90,15 +91,15 @@ const perguntas = [
         {
             texto:"Satisfeito",
             afirmacao:[
-                "No final, um sentimento de satisfação o percorre.",
-                "Você ficou muito aliviado e satisfeito, com o bom trabalho que fez."
+                " No final, um sentimento de satisfação o percorre.",
+                " Você ficou muito aliviado e satisfeito, com o bom trabalho que fez."
             ]
         },
         {
             texto:"Feliz, embora recioso",
             afirmacao:[
-                "No final, mesmo furioso com as grandes corporações você ainda se sente satisfeito pelo trabalho feito.",
-                "Pensado bem, você decide que quando ficasse mais velho tentaria ajudar a mudar isso com mais frequência."
+                " No final, mesmo furioso com as grandes corporações você ainda se sente satisfeito pelo trabalho feito.",
+                " Pensado bem, você decide que quando ficasse mais velho tentaria ajudar a mudar isso com mais frequência."
             ]
         }
     ]
@@ -132,7 +133,7 @@ function mostraAlternativas(){
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = opcaoSelecionada.afirmacao;
+    const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
     historiaFinal += afirmacoes + "";
     atual++;
     mostraPergunta();
@@ -144,5 +145,9 @@ function mostraResultado() {
     caixaAlternativas.textContent = "";
 }
 
+function aleatorio (lista){
+    const posicao = Math.floor(Math.random()* lista.length);
+    return lista[posicao];
+}
 
 mostraPergunta();

@@ -27,16 +27,18 @@ body {
   
 h1{
     font-size: 35px;
-    color: var(--cor-destaque); 
+    color: var(--cor-destaque);
+
 }
 
 button {
+    margin-top: 20px;
     background-color: var(--cor-principal);
     color: var(--cor-destaque);
     border: none;
     border-radius: 15px;
     padding: 15px;
-    transition: background-color 0.3s;
+    transition: 0.3s;
 }
 
 button:hover {
@@ -46,4 +48,7 @@ button:hover {
 
 .caixa-perguntas{
     color: var(--cor-destaque); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
