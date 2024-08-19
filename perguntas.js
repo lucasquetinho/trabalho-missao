@@ -94,8 +94,8 @@ export const perguntas = [
             afirmacao:[
                 " No final, mesmo furioso com as grandes corporações você ainda se sente satisfeito pelo trabalho feito.",
                 " Pensado bem, você decide que quando ficasse mais velho tentaria ajudar a mudar isso com mais frequência."
-            ]
-        }
+            ],
+        },
     ]
 }
 ];

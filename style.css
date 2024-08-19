@@ -63,10 +63,10 @@ button:hover {
     align-items: center;
 }
 
-.caixa-resultado {
- 
+.caixa-resultado{
+    display: none;
 }
 
-.caixa-resultado-mostrar {
+.caixa-resultado.mostar{
     display: block;
 }
