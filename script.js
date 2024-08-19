@@ -42,11 +42,10 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2001...";
+    caixaPerguntas.textContent = "Em 2012...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
-    caixaResultados.classList.add("mostrar");
-    botaoJogarNovamente.addEventListener("click", jogaNovamente);
+    botaoJogarNovamente.addEventListener("click", jogaNovamente());
 }
 
 function jogaNovamente(){
