@@ -19,7 +19,7 @@ body {
 }
 
 .caixa-principal{
-    background-color: var(--cor-principal);
+    background-color: var(--cor-fundo);
     width: 90%;
     text-align: center;
     padding: 20px;
@@ -32,10 +32,14 @@ h1{
 }
 
 h1, .caixa-perguntas, .caixa-resultado {
-    font-family: "Oswald", sans-serif;;
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
 button {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
     background-color: var(--cor-principal);
     color: var(--cor-destaque);
@@ -60,11 +64,11 @@ button:hover {
 .caixa-alternativas{
     display: flex;
     gap: 15px;
-    align-items: center;
+    justify-content: center;
 }
 
 .caixa-resultado{
-    
+    display: none;
 }
 
 .caixa-resultado.mostar{
