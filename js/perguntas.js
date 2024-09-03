@@ -5,16 +5,16 @@ export const perguntas = [
         {
             texto:"Assustador",
             afirmacao:[
-                " No começo você achou aquilo muito assustador e não queria saber o que era.",
-                " No começo, quando viu aquilo, você sentiu um sentimento muito estranho."
+                " ao começar, você achou aquilo muito assustador e não queria saber o que era.",
+                " ao começar, quando viu aquilo, você sentiu um sentimento muito estranho."
             ],
             proxima: 1,
         },
         {
             texto:"Esquisito",
             afirmacao:[
-                " No começo, você tnha dúvida do era aquilo e queria saber o que era.",
-                " Quando viu as algas pela primeira vez, você tinha uma grande vontade de descobrir o que era aquilo."
+                " ao começar, você tnha dúvida do era aquilo e queria saber o que era.",
+                " ao começar,quando viu as algas pela primeira vez, você tinha uma grande vontade de descobrir o que era aquilo."
             ],
             proxima: 2,
         },
