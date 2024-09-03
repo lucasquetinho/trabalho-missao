@@ -40,7 +40,7 @@ h1, .caixa-perguntas, .caixa-resultado {
 button {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 15px;
     background-color: var(--cor-principal);
     color: var(--cor-destaque);
     border: none;
@@ -55,22 +55,48 @@ button:hover {
 }
 
 .caixa-perguntas{
-    color: var(--cor-destaque); 
+    color: var(--cor-texto); 
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 19px;
 }
 
 .caixa-alternativas{
     display: flex;
     gap: 15px;
     justify-content: center;
+    padding: 10px;
+    font-size: 19px;
+    border-radius: 16px;
 }
 
-.caixa-resultado{
-    display: none;
+.tela-inicial {
+    font-size: 19px;
 }
 
 .caixa-resultado.mostar{
     display: block;
+}
+
+.iniciar-btn{
+    margin-left: 47%;
+    margin-top: 30px;
+    padding: 18px;
+    font-size: 15px;
+    border-radius: 16px;
+}
+
+.novamente-btn{
+    background-color: var(--cor-principal);
+    color: var(--cor-destaque);
+    align-items: center;
+}
+
+.texto-resultado{
+    color: var(--cor-texto); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
 }

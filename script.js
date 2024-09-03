@@ -1,4 +1,4 @@
-import { aleatorio, nome } from './aleatorio.js';
+import { aleatorio, nome } from './aleatorio.js'; 
 import { perguntas } from './perguntas.js';
 
 const caixaPrincipal = document.querySelector(".caixa-principal");
@@ -59,10 +59,11 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = `Em 2049, ${nome}`;
+    caixaPerguntas.textContent = `Em 2013, ${nome}`;
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
     caixaResultado.classList.add("mostrar");
+    botaoJogarNovamente.classList.add("mostrar");
     botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
 
@@ -70,6 +71,7 @@ function jogaNovamente() {
     atual = 0;
     historiaFinal = "";
     caixaResultado.classList.remove("mostrar");
+    botaoJogarNovamente.classList.remove("mostrar");
     mostraPergunta();
 }
 
