@@ -64,7 +64,6 @@ export const perguntas = [
         },
     ]
 },
-
 {
     enunciado: "No lago, você avista um guarda florestal e então pergunta a ele se há alguma forma de previnir esse acidente, ele responde que sim, e que era só não ser depositado dejetos industriais no lago, onvindo isso você fica:",
     alternativas: [

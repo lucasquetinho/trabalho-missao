@@ -21,6 +21,7 @@ body {
 .caixa-principal{
     background-color: var(--cor-fundo);
     width: 90%;
+    max-width: 800px;
     text-align: center;
     padding: 20px;
 }
@@ -75,12 +76,16 @@ button:hover {
     font-size: 19px;
 }
 
-.caixa-resultado.mostar{
+.caixa-resultado{
+    display: none;
+}
+
+.caixa-resultado.mostrar{
     display: block;
 }
 
 .iniciar-btn{
-    margin-left: 47%;
+    margin-left: 45.5%;
     margin-top: 30px;
     padding: 18px;
     font-size: 15px;
@@ -91,6 +96,9 @@ button:hover {
     background-color: var(--cor-principal);
     color: var(--cor-destaque);
     align-items: center;
+    display: flex;
+    margin-left: 42%;
+    margin-top: 30px;
 }
 
 .texto-resultado{
@@ -99,4 +107,5 @@ button:hover {
     justify-content: center;
     align-items: center;
     font-size: 19px;
+    margin-top: 0px;
 }
